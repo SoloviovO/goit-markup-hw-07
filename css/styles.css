@@ -111,7 +111,7 @@ ul {
   border-bottom: 1px solid var(--line-color);
 }
 
-.main-header {
+.header__container {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -128,20 +128,20 @@ ul {
   letter-spacing: 0.03em;
 }
 
-.logo-main {
+.header__logo {
   display: block;
   margin-right: 93px;
   padding-top: 24px;
   padding-bottom: 25px;
 }
 
-.logo-header {
+.header__logo--black {
   color: var(--main-dark-color);
 }
 /* ==================== Логотип ====================*/
 /* ==================== Навігація і контакти ====================*/
 
-.main-nav {
+.header__nav {
   display: flex;
   align-items: center;
 }
@@ -275,16 +275,17 @@ ul {
   border-radius: 4px;
   border: none;
   padding: 10px 10px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-main {
+.hero__button {
   width: 216px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-main:hover,
-.button-main:focus {
+.button:hover,
+.button:focus {
   background-color: var(--shadow-btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -476,22 +477,22 @@ ul {
 
 /* ==================== Підвал ====================*/
 
-.main-footer {
+.footer {
   background-color: var(--primary-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.footer-box {
+.footer__container {
   display: flex;
   align-items: baseline;
 }
 
-.logo__footer {
+.footer__logo--white {
   color: var(--main-light-color);
 }
 
-.footer-logo {
+.footer__logo {
   margin-bottom: 20px;
   display: inline-block;
 }
@@ -560,12 +561,6 @@ ul {
   align-items: center;
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.signup-form__button:hover,
-.signup-form__button:focus {
-  background-color: var(--shadow-btn-color);
 }
 
 .signup-form__icon {
@@ -632,7 +627,7 @@ ul {
 
 .button-list__filter:hover,
 .button-list__filter:focus,
-.button-current {
+.button-list__current {
   color: var(--main-light-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
@@ -735,13 +730,13 @@ ul {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.backdrop.is-hidden .modal {
+.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0.1);
 }
 
@@ -777,13 +772,13 @@ ul {
   border-radius: 50%;
 }
 
-.close-icon {
+.button-close__icon {
   fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-close:hover .close-icon,
-.button-close:focus .close-icon {
+.button-close:hover .button-close__icon,
+.button-close:focus .button-close__icon {
   fill: var(--accent-color);
 }
 
@@ -925,12 +920,6 @@ ul {
   width: 200px;
   padding: 10px 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.modal-form__button:hover,
-.modal-form__button:focus {
-  background-color: var(--shadow-btn-color);
 }
 
 /* ==================== Бекддроп і модалки ============*/

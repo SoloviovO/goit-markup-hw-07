@@ -78,3 +78,49 @@
     color: $placeholder-color;
   }
 }
+
+.form-check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  letter-spacing: 0.03em;
+
+  &__input {
+    appearance: none;
+  }
+
+  &__frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    outline: none;
+    border: 2px solid $primary-text-color;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__frame:focus {
+    border: 2px solid $accent-color;
+  }
+
+  &__input:checked + &__frame {
+    background-color: $accent-color;
+    border: 2px solid transparent;
+  }
+
+  &__link {
+    color: $accent-color;
+  }
+}
